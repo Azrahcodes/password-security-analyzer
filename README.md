@@ -9,7 +9,18 @@ A simple Python project that analyzes password strength.
 - Detects digits and special characters
 - Classifies password as Weak, Medium, or Strong
 - Suggests stronger passwords if your password is weak or medium
-Checks if your password has been leaked in data breaches
+- Checks if your password has been leaked in data breaches
+## Demo / Screenshots
+
+### Weak & Leaked Password
+![Weak password](screenshots/weak.png)
+
+### Medium Password
+![Medium password](screenshots/medium.png)
+
+### Strong & Safe Password
+![Strong password](screenshots/strong.png)
+
 ## How to Run
 ```bash
 python main.py
