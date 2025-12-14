@@ -1,3 +1,6 @@
+import random
+import string
+
 def check_password_strength(password):
     score = 0
 
@@ -14,13 +17,19 @@ def check_password_strength(password):
 
     return score
 
+def suggest_password():
+    length = 12
+    chars = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(chars) for _ in range(length))
 
 password = input("Enter your password: ")
 strength = check_password_strength(password)
 
 if strength <= 2:
     print("Weak password")
+    print("Suggestion: Try using a longer password with uppercase, lowercase, digits, and symbols.")
 elif strength <= 4:
     print("Medium strength password")
+    print(f"Suggestion: Consider using a password like: {suggest_password()}")
 else:
     print("Strong password")
